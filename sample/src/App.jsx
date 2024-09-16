@@ -1,16 +1,28 @@
 import React from 'react';
 import Array from './components/Array';
+import Ground from './components/Ground';
+import Navbar from './components/Navbar';
 export const App = () => {
   const count=[
     {"name":"mathesh  ",
     "game":"cricket"
   }
   ]
+
+  const graph ={
+    appData:"Cricket",
+    appName:"cricbuzz"
+  }
+
+  const arrayvalue=[
+    "mathesh",
+    "virat kohli"
+  ]
   return (
     
      <>
 
-       {/* <div className="h-screen w-screen flex justify-center items-center bg-gradient-to-r from-slate-50 to-cyan-500">
+       <div className="h-screen w-screen flex justify-center items-center bg-gradient-to-r from-slate-50 to-cyan-500">
          <div className="w-[500px] h-[500px] flex justify-center items-center bg-gradient-to-bl from-slate-700  to-pink-300">
            <form className="h-[500px] w-full flex flex-col justify-center items-center gap-5">
              <label className="w-[250px] flex justify-center items-center bg-green-200 p-3 rounded-lg">LOGIN FORM</label>
@@ -23,9 +35,11 @@ export const App = () => {
            </form>
 
          </div>
-      </div> */}
+      </div>
       <div>
         <Array data={count}/>
+        <Navbar para={graph} />
+        <Ground set={arrayvalue} />
       </div>
     </>
   )

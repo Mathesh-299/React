@@ -1,6 +1,6 @@
 const Array=({data})=>{
     console.log(data)
-   // const arrayDataItems = data.map((data1) => <li>{data1}</li>);
+    // const arrayDataItems = data.map((data1) => <li>{data1}</li>);
     return (
 
         <div className="bg-cyan-100 flex justify-center items-center">
