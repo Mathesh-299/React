@@ -1,13 +1,19 @@
 import React from 'react';
-import Navbar from './components/Navbar';
+import Array from './components/Array';
 export const App = () => {
+  const count=[
+    {"name":"mathesh  ",
+    "game":"cricket"
+  }
+  ]
   return (
     
      <>
-       <div className="h-screen w-screen flex justify-center items-center bg-gradient-to-r from-slate-50 to-cyan-500">
+
+       {/* <div className="h-screen w-screen flex justify-center items-center bg-gradient-to-r from-slate-50 to-cyan-500">
          <div className="w-[500px] h-[500px] flex justify-center items-center bg-gradient-to-bl from-slate-700  to-pink-300">
            <form className="h-[500px] w-full flex flex-col justify-center items-center gap-5">
-             <label className="w-[250px] flex justify-center items-center bg-green-200 p-4 ">LOGIN FORM</label>
+             <label className="w-[250px] flex justify-center items-center bg-green-200 p-3 rounded-lg">LOGIN FORM</label>
              <input type="text" id="" name="name" placeholder="Enter Your Name" className="w-[450px] h-[50px] font-bold outline-none active:outline-none focus:border-b-2  hover:border-purple-500 rounded-md" />
              <input type="email" id="" name="email" placeholder="Enter Your Email" className="w-[450px] h-[50px] font-bold outline-none active:outline-none focus:border-b-2 hover:border-yellow-400 rounded-md" />
             <input type="phoneno" id="" name="number" placeholder="Enter your Phone Number" className="h-[50px] w-[450px] font-bold outline-none active:outline-none focus:border-b-2 hover:border-red-900 rounded-md" />
@@ -17,10 +23,9 @@ export const App = () => {
            </form>
 
          </div>
-      </div>
-     <div>
-        
-      <Navbar appname/>
+      </div> */}
+      <div>
+        <Array data={count}/>
       </div>
     </>
   )
