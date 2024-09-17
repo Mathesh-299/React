@@ -1,29 +1,23 @@
-import { CircleUserRound } from "lucide-react";
-import React from 'react';
+import { CircleUser } from 'lucide-react';
 export const Navbar = () => {
   return (
     <>
-    <div className='w-screen h-screen bg-gray-400'>
-        <div className=' w-full h-[60px] bg-gradient-to-r from-gray-400 to-gray-600 flex justify-start items-center gap-3 border-white'>
-            <div className='w-[700px] h-[50px]  font-bold text-3xl text-white'>
-                <div className='flex justify-center items-center pt-1'>Mathesh</div>
+    <div className='w-full h-[4rem] flex bg-cyan-200 justify-center items-center shadow-lg shadow-cyan-100'>
+        <div className='w-[80%] h-ful flex justify-start items-center flex-row'>
+            <div className='w-1/2 h-full flex justify-start items-center font-bold text-2xl text-white'> Mathesh M</div>
+            <div className='w-1/2 h-full flex justify-end items-center'>
+                <ul className='w-4/6 line-none flex justify-between items-center flex-row '>
+                    <li className='font-bold text-2xl text-white'>Profile</li>
+                    <li className='font-bold text-2xl text-white'>Project</li>
+                    <li className='font-bold text-2xl text-white'>Contact</li>
+                </ul>
+                    <CircleUser className="text-white ml-10" size={32}/>
             </div>
-            <div className='w-[350px] h-[50px]  flex flex-row  font-bold text-3xl text-white p-3 justify-end items-center' >
-                <div>Profile</div>
-            </div>
-            <div className='w-[350px] h-[50px]  flex flex-row  font-bold text-3xl text-white  p-3 justify-end items-center' >
-                <div>Project</div>
-            </div>
-            <div className='w-[350px] h-[50px]  flex flex-row  font-bold text-3xl text-white p-3 justify-end items-center' >
-                <div>Contact</div>
-            </div>
-            <div className='w-[350px] h-[50px]  flex flex-row  font-bold text-3xl text-white p-3 justify-center items-center' > <CircleUserRound />
-            </div>
-        </div>
-        <div className="bg-white w-3/6 h-3/6 flex flex-row justify-center items-center " >
         </div>
     </div>
     </>
   )
 }
+
+export default Navbar ;
 
