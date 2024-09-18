@@ -1,8 +1,9 @@
 import Pic from '../assets/img/IMG-20221115-WA0002.jpg';
-
+import Navbar from '../Component/Navbar';
 export const Profile = () => {
   return (
     <>
+    <Navbar/>
     <div className='w-[1/2]  flex flex-row bg-slate-300 '>
     <div className='h-full w-[40%] flex justify-center items-center  flex-col gap-3'>
         <img src={Pic} alt="Profile" className='w-2/6 rounded-3xl  mt-[4%]'/>
