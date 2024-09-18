@@ -12,13 +12,11 @@ export const App = () => {
     
     <BrowserRouter>
     <Routes>
-      {/* <Route element={</>}> */}
-
+     
       <Route path={'/'} element={<Profile/>}></Route>
       <Route path={'/project'} element={<Project/>}></Route>
       <Route path={'/contact'} element={<Contact/>}></Route>
       <Route path={'/login'} element={<Login/>}></Route>
-      {/* </Route> */}
     </Routes>
     </BrowserRouter>
     
