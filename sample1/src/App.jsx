@@ -8,11 +8,7 @@ export const App = () => {
   return (
     
    <>
-    {/* <Navbar/>
-      <Navbar />
-   */}
-    {/* <Contact/> */}
-    {/* <Project/> */}
+    
     <BrowserRouter>
     <Routes>
       <Route path={'/'} element={<Profile/>}></Route>
