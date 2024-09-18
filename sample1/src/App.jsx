@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// import Navbar from './Component/Navbar';
 import Contact from './Pages/Contact';
 import Profile from './Pages/Profile';
 import Project from './Pages/Project';
@@ -8,10 +9,10 @@ export const App = () => {
     
    <>
     {/* <Navbar/>
+      <Navbar />
    */}
     {/* <Contact/> */}
     {/* <Project/> */}
-
     <BrowserRouter>
     <Routes>
       <Route path={'/'} element={<Profile/>}></Route>

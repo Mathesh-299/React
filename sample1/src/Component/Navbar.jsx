@@ -1,6 +1,9 @@
 import { CircleUser } from 'lucide-react';
 import { Link } from 'react-router-dom';
 export const Navbar = () => {
+  // const Navlink=[{
+
+  // }]
   return (
     <>
     <div className='w-full h-[4rem] flex bg-cyan-200 justify-center items-center shadow-lg shadow-cyan-100'>
