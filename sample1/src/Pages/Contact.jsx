@@ -4,8 +4,7 @@ export const Contact = () => {
   return (
     <>
       <Navbar />
-      
-
+  
     </>
   )
 }
