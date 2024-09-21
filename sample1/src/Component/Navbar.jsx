@@ -42,10 +42,10 @@ export const Navbar = () => {
     // }
     return (
         <>
-            <div className='w-full h-[4rem] flex bg-gray-600 justify-center items-center shadow-lg shadow-cyan-100 rounded-sm'>
-                <div className='w-[80%] h-ful flex justify-start items-center flex-row'>
-                    <div className='w-1/2 h-full flex justify-start items-center font-bold text-4xl text-white '>
-                        <Link to={'/'}>Mathesh M</Link></div>
+            <div className='w-[99vw] h-[4rem] flex bg-gray-600 justify-center items-center shadow-lg shadow-cyan-100'>
+                <div className='w-[80%] h-full flex justify-start items-center flex-row'>
+                    <div className='w-1/2 h-full flex justify-start items-center  '>
+                        <Link to={'/'}><p className='font-bold text-4xl text-white'>Mathesh</p></Link></div>
                     <div className='w-1/2 h-full flex justify-end items-center'>
                         <ul className='w-4/6 line-none flex justify-between items-center flex-row gap-10'>
                             {
@@ -61,18 +61,27 @@ export const Navbar = () => {
                         </ul>
 
                         {visible && (
-                            <button>
-                                <Link to={'/login'}>
-                                    <CircleUser className="text-white ml-10 flex justify-end items-center border-2 border-white hover:bg-white  hover:border-white hover:text-black/70" size={32} onClick={() => setvisible(true)} />
+                            //         <button className=''>
+                            //             <Link to={'/login'}>
+                            //                 <CircleUser className="text-white ml-10 flex justify-end items-center border-2 border-white hover:bg-white  hover:border-white hover:text-black/70" size={32} onClick={() => setvisible(true)} />
+                            //             </Link>
+                            //         </button>
+                            <button
+                                className="flex justify-end items-center border-2 border-white hover:bg-white hover:border-white hover:text-black/70 ml-20 text-white"
+                                onClick={() => setvisible(true)}
+                            >
+                                <Link to="/login">
+                                    <CircleUser size={32} />
                                 </Link>
                             </button>
+
                         )
                         }
 
                     </div>
                 </div>
             </div>
-            
+
         </>
     )
 }
