@@ -43,15 +43,28 @@ export const Profile = () => {
             </div>
 
             {/* Icons Section */}
-            <div className="flex justify-center md:justify-start space-x-5 sm:space-x-8 lg:space-x-10 text-3xl sm:text-4xl text-gray-900 gap-2">
-              <FontAwesomeIcon icon={faEnvira} size="2x" title="MongoDB" className="text-green-500" />
-              <FontAwesomeIcon icon={faReact} size="2x" title="React" className="text-indigo-800" />
-              <FontAwesomeIcon icon={faNodeJs} size="2x" title="Node.js" className="text-green-500" />
-              <FontAwesomeIcon icon={faJava} size="2x" title="Spring" className="text-gray-700" />
-              <FontAwesomeIcon icon={faGit} size="2x" className="text-gray-600" />
-              <FontAwesomeIcon icon={faAws} size="2x" className="text-gray-600" />
-              <FontAwesomeIcon icon={faHtml5} size="2x" title="HTML5" className="text-orange-500" />
-              {/* <FontAwesomeIcon icon={faCss3Alt} size="2x" title="CSS3" className="text-blue-500" /> */}
+            <div className="w-full flex flex-wrap justify-center md:justify-start space-x-5 sm:space-x-6 lg:space-x-8 text-3xl sm:text-4xl lg:text-5xl text-gray-900 gap-2">
+              <div className="flex justify-center items-center w-[80px] h-[80px]">
+                <FontAwesomeIcon icon={faEnvira} size="2x" title="MongoDB" className="text-green-500" />
+              </div>
+              <div className="flex justify-center items-center w-[80px] h-[80px]">
+                <FontAwesomeIcon icon={faReact} size="2x" title="React" className="text-indigo-800" />
+              </div>
+              <div className="flex justify-center items-center w-[80px] h-[80px]">
+                <FontAwesomeIcon icon={faNodeJs} size="2x" title="Node.js" className="text-green-500" />
+              </div>
+              <div className="flex justify-center items-center w-[80px] h-[80px]">
+                <FontAwesomeIcon icon={faJava} size="2x" title="Spring" className="text-gray-700" />
+              </div>
+              <div className="flex justify-center items-center w-[80px] h-[80px]">
+                <FontAwesomeIcon icon={faGit} size="2x" className="text-gray-600" />
+              </div>
+              <div className="flex justify-center items-center w-[80px] h-[80px]">
+                <FontAwesomeIcon icon={faAws} size="2x" className="text-gray-600" />
+              </div>
+              <div className="flex justify-center items-center w-[80px] h-[80px]">
+                <FontAwesomeIcon icon={faHtml5} size="2x" title="HTML5" className="text-orange-500" />
+              </div>
             </div>
 
           </div>
