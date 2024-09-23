@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Contact from './Pages/Contact';
 import Login from './Pages/Login';
 import Profile from './Pages/Profile';
-import Project from './Pages/Project';
+import Project from './Pages/Projects';
 import './assets/css/style.css';
 export const App = () => {
   return (
