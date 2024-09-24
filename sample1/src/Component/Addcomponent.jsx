@@ -1,12 +1,34 @@
 import { CircleX, Plus } from 'lucide-react'
 import React, { useRef, useState } from 'react'
+import { addProject } from '../service/api'
 
 const Addcomponent = () => {
   const titleref = useRef(null)
   const descref = useRef(null)
   const linkref = useRef(null)
   const coverref = useRef(null)
-
+  const handleAdd= async(e)=>{
+    e.preventDefault();
+    const projectdata={
+      title:titleref.current.value,
+      desc:descref.current.value,
+      link:linkref.current.value,
+      cover:coverref.current.value
+    }
+    try {
+      const response=addProject(projectdata)
+      console.log(response.status)
+      if((await response).status === 200)
+      {
+        console.log("Added")
+      }
+      fetchproject()
+    } catch (error) {
+      console.log(error)
+    }
+    console.log(projectdata)
+    setvisible(false)
+  }
   const [visible, setvisible] = useState(null)
   return (
     <>
@@ -23,12 +45,12 @@ const Addcomponent = () => {
                 </div>
                 <div className="w-1/2 flex justify-end text-5xl">
                   <label className="relative inline-flex items-center cursor-pointer font-bold " onClick={() => setvisible(!visible)} >
-                    <CircleX onClick={() => setVisible(!visible)} className='font-bold text-red-800' />
+                    <CircleX onClick={() => setvisible(!visible)} className='font-bold text-red-800' />
                   </label>
                 </div>
               </div>
               <div className='w-full h-full flex justify-center items-center bg-black/90 rounded-lg' >
-                <form className="w-[99%] h-[100%] flex flex-col justify-center items-center gap-3 p-8 ">
+                <form className="w-[99%] h-[100%] flex flex-col justify-center items-center gap-3 p-8 " onSubmit={handleAdd}>
                   <input type="text" ref={titleref} name="name" id="title" placeholder="Your Project Title" className=' w-full h-12 bg-[#d1d1d1] outline-none active:outline-none focus:border-b-2 text-xl hover:border-blue-600 p-6 font-bold rounded-sm' required />
                   <input type="text" ref={descref} name="name" id="desc" placeholder="Your Project Desc" className=' w-full h-12 bg-[#d1d1d1] outline-none active:outline-none focus:border-b-2 text-xl hover:border-blue-700 p-6 font-bold rounded-sm' required />
                   <input type="text" ref={linkref} name="name" id="link" placeholder="Your Project Link" className=' w-full h-12 bg-[#d1d1d1] outline-none active:outline-none focus:border-b-2 text-xl hover:border-blue-700 p-6 font-bold rounded-sm' required />
