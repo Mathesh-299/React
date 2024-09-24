@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { toast, Toaster } from "sonner"
+import { Toaster } from "sonner"
 import Addcomponent from "../Component/Addcomponent"
 import Navbar from "../Component/Navbar"
 import Projectcard from "../Component/Projectcard"
@@ -13,7 +13,7 @@ const Projects = () => {
       setProjectdata(data)
     } catch (error) {
       console.warn(error);
-      toast('Error');
+      // toast('Error');
     }
   }
   // console.log(projectdata)
