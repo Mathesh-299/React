@@ -22,7 +22,7 @@ const Addcomponent = ({fetchproject}) => {
       {
         console.log("Added")
       }
-      fetchproject()
+      fetchprojects()
     } catch (error) {
       console.log(error)
     }
