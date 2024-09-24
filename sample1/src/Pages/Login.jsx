@@ -1,4 +1,4 @@
-    import { CircleX } from "lucide-react";
+import { CircleX } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../Component/Navbar";
@@ -68,10 +68,10 @@ export const Login = () => {
                                         Submit
                                     </button>
                                     {/* <input type="text" ref={nameref} name="name" id="name" placeholder="Name" className=' w-80 h-[15%] outline-none active:outline-none focus:border-b-2 hover:border-purple-700 font-bold' required />
-//                                         <input type="password" name="password" id="password" placeholder="Password" className=' w-80 h-[15%] outline-none active:outline-none focus:border-b-2 hover:border-purple-700 font-bold' required onChange={handleChange} />
-//                                         <input type="email" ref={emailref} name="email" id="email" placeholder="Email" className=' w-80 h-[15%] outline-none active:outline-none focus:border-b-2 hover:border-purple-700 font-bold' required />
-//                                         <input type="number" ref={numberref} name="number" id="number" placeholder="Phone" maxLength={10} className=' w-80 h-[15%] outline-none active:outline-none focus:border-b-2 hover:border-purple-700 font-bold' required />
-//                                         <input type="number" ref={ageref} name="age" id="age" placeholder="Age" className=' w-80 h-[15%] outline-none active:outline-none focus:border-b-2 hover:border-purple-700 font-bold' required /> */}
+                                         <input type="password" name="password" id="password" placeholder="Password" className=' w-80 h-[15%] outline-none active:outline-none focus:border-b-2 hover:border-purple-700 font-bold' required onChange={handleChange} />
+                                         <input type="email" ref={emailref} name="email" id="email" placeholder="Email" className=' w-80 h-[15%] outline-none active:outline-none focus:border-b-2 hover:border-purple-700 font-bold' required />
+                                         <input type="number" ref={numberref} name="number" id="number" placeholder="Phone" maxLength={10} className=' w-80 h-[15%] outline-none active:outline-none focus:border-b-2 hover:border-purple-700 font-bold' required />
+                                      <input type="number" ref={ageref} name="age" id="age" placeholder="Age" className=' w-80 h-[15%] outline-none active:outline-none focus:border-b-2 hover:border-purple-700 font-bold' required /> */}
                                 </form>
                             </div>
                         </div>
