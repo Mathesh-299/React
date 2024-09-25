@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { Toaster } from "sonner"
 import Addcomponent from "../Component/Addcomponent"
 import Navbar from "../Component/Navbar"
 import Projectcard from "../Component/Projectcard"
@@ -34,7 +33,7 @@ const Projects = () => {
             <>
               {
                 projectdata?.map((data, index) => (
-                  <Projectcard title={data.title} desc={data.desc} key={index} pid={index} cover={data.cover} id={data.id} link={data.link}/>
+                  <Projectcard title={data.title} desc={data.desc} key={index} pid={index} cover={data.coveriimg} id={data.id} link={data.link}/>
                 ))
               }
             </>
@@ -47,8 +46,8 @@ const Projects = () => {
 
         }
       </div >
-
-      <Toaster richColors />
+{/* /users */}
+      {/* <Toaster richColors /> */}
     </>
   )
 }

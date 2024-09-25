@@ -2,7 +2,7 @@ import { CircleX, Plus } from 'lucide-react'
 import React, { useRef, useState } from 'react'
 import { addProject } from '../service/api'
 
-const Addcomponent = ({fetchproject}) => {
+const Addcomponent = ({fetchprojects}) => {
   const titleref = useRef(null)
   const descref = useRef(null)
   const linkref = useRef(null)

@@ -2,7 +2,7 @@ import { Pencil, Trash } from 'lucide-react';
 import React, { useState } from 'react';
 import { deleteProject, editProject } from '../service/api';
 
-export const Projectcard = ({ title, desc, key, pid, cover, id, link }) => {
+export const Projectcard = ({ title, desc,cover, id, link }) => {
   const [titleState, settitleState] = useState(title);
   const [descState, setdescState] = useState(desc);
   const [linkState, setlinkState] = useState(link)
@@ -58,11 +58,11 @@ export const Projectcard = ({ title, desc, key, pid, cover, id, link }) => {
           <div className="flex justify-center items-center w-12 h-12 rounded-full bg-blue-500 transition-all duration-300 absolute top-0 group-hover:scale-[.60] group-hover:origin-top text-white">
             <Pencil />
           </div>
-          <div className="absolute text-white font-bold -bottom-10 left-1/2 text-sm text-center whitespace-nowrap transition-all duration-300 transform -translate-x-1/2 group-hover:bottom-0">
+          <div className="absolute text-white font-bold bottom-10 left-1/2 text-sm text-center whitespace-nowrap transition-all duration-300 transform -translate-x-1/2 group-hover:bottom-0">
             Edit
           </div>
         </div>
-        <div className="overflow-x-visible relative w-12 h-12 overflow-y-clip group text-center  hover:bg-red-500/20 rounded-sm hover:border-b-2 hover:border-red-500" onClick={() => { handledelete(id) }}>
+        <div className="overflow-x-visible relative w-12 h-12 overflow-y-clip group text-center  hover:bg-red-500/20 rounded-sm hover:border-b-2 hover:border-red-500" onClick={() => { handleDelete(id) }}>
           <div className="flex justify-center items-center w-12 h-12 rounded-full bg-red-500 transition-all duration-300 absolute top-0 group-hover:scale-[.60] group-hover:origin-top text-white">
             <Trash />
           </div>
@@ -75,7 +75,7 @@ export const Projectcard = ({ title, desc, key, pid, cover, id, link }) => {
         visible && (
           <>
             <div className="h-screen w-screen absolute top-0 left-0 bg-black/20 flex justify-center items-center z-50">
-              <div className=" h-[50%] w-[30%] bg-red z-50 flex flex-col  bg-white  shadow-lg ">
+              <div className=" h-[80%] w-[30%] bg-red z-50 flex flex-col  bg-blue-400  shadow-lg ">
                 <div className="w-full h-[15%] flex flex-row justify-start px-10 items-center border-2 text-blue-500 bg-white text-xl font-bold shadow-sm">
                   <div className="w-1/2">
                     Edit Project
@@ -83,7 +83,10 @@ export const Projectcard = ({ title, desc, key, pid, cover, id, link }) => {
                   <div className="w-1/2 flex justify-end">
                     <label className="relative inline-flex items-center cursor-pointer" onClick={() => setvisible(!visible)} >
                       <input type="checkbox" value="" className="sr-only peer" />
-                      <div className="peer ring-0 bg-rose-400  rounded-full outline-none duration-300 after:duration-500 w-8 h-8  shadow-md peer-checked:bg-emerald-500  peer-focus:outline-none  after:rounded-full after:absolute after:outline-none after:h-6 after:w-6 after:bg-white after:top-1 after:left-1 after:flex after:justify-center after:items-center  peer-hover:after:scale-75 peer-checked:after:content-['✔️'] after:-rotate-180 peer-checked:after:rotate-0">
+                      <div className="peer bg-rose-400 w-8 h-8 rounded-full shadow-md transition-all duration-300 peer-checked:bg-emerald-500">
+                        <div className="absolute top-1 left-1 h-6 w-6 bg-white rounded-full transition-transform peer-hover:scale-75 peer-checked:rotate-0 -rotate-180 flex justify-center items-center">
+                          <span className="peer-checked:content-['✔️']"></span>
+                        </div>
                       </div>
                     </label>
                   </div>
