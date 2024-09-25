@@ -2,7 +2,7 @@ import { Pencil, Trash } from 'lucide-react';
 import React, { useState } from 'react';
 import { deleteProject, editProject } from '../service/api';
 
-export const Projectcard = ({ title, desc,cover, id, link }) => {
+export const Projectcard = ({ title, desc, cover, id, link }) => {
   const [titleState, settitleState] = useState(title);
   const [descState, setdescState] = useState(desc);
   const [linkState, setlinkState] = useState(link)
@@ -54,22 +54,26 @@ export const Projectcard = ({ title, desc,cover, id, link }) => {
         <p className="text-gray-400 text-sm  px-6">
           {desc}
         </p>
-        <div className="overflow-x-visible relative w-12 h-12 overflow-y-clip group text-center hover:bg-blue-500/20 rounded-sm hover:border-b-2 hover:border-blue-500" onClick={() => setvisible(true)}>
-          <div className="flex justify-center items-center w-12 h-12 rounded-full bg-blue-500 transition-all duration-300 absolute top-0 group-hover:scale-[.60] group-hover:origin-top text-white">
-            <Pencil />
+        <div className="flex flex-row gap-4">
+          <div className="overflow-x-visible relative w-12 h-12 group text-center hover:bg-blue-500/20 rounded-sm hover:border-b-2 hover:border-blue-500" onClick={() => setvisible(true)}>
+            <div className="flex justify-center items-center w-12 h-12 rounded-full bg-blue-500 transition-all duration-300 absolute top-0 group-hover:scale-[.60] group-hover:origin-top text-white">
+              <Pencil />
+            </div>
+            <div className="absolute text-white font-bold bottom-10 left-1/2 text-sm text-center whitespace-nowrap transition-all duration-300 transform -translate-x-1/2 group-hover:bottom-0">
+              Edit
+            </div>
           </div>
-          <div className="absolute text-white font-bold bottom-10 left-1/2 text-sm text-center whitespace-nowrap transition-all duration-300 transform -translate-x-1/2 group-hover:bottom-0">
-            Edit
+
+          <div className="overflow-x-visible relative w-12 h-12 overflow-y-clip group text-center hover:bg-red-500/20 rounded-sm hover:border-b-2 hover:border-red-500" onClick={() => { handleDelete(id) }}>
+            <div className="flex justify-center items-center w-12 h-12 rounded-full bg-red-500 transition-all duration-300 absolute top-0 group-hover:scale-[.60] group-hover:origin-top text-white">
+              <Trash />
+            </div>
+            <div className="absolute text-white font-bold bottom-10 left-1/2 text-sm text-center whitespace-nowrap transition-all duration-300 transform -translate-x-1/2 group-hover:bottom-0">
+              Delete
+            </div>
           </div>
         </div>
-        <div className="overflow-x-visible relative w-12 h-12 overflow-y-clip group text-center  hover:bg-red-500/20 rounded-sm hover:border-b-2 hover:border-red-500" onClick={() => { handleDelete(id) }}>
-          <div className="flex justify-center items-center w-12 h-12 rounded-full bg-red-500 transition-all duration-300 absolute top-0 group-hover:scale-[.60] group-hover:origin-top text-white">
-            <Trash />
-          </div>
-          <div className="absolute text-white font-bold -bottom-10 left-1/2 text-sm text-center whitespace-nowrap transition-all duration-300 transform -translate-x-1/2 group-hover:bottom-0">
-            Delete
-          </div>
-        </div>
+
       </div>
       {
         visible && (

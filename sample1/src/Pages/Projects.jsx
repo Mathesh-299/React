@@ -33,7 +33,7 @@ const Projects = () => {
             <>
               {
                 projectdata?.map((data, index) => (
-                  <Projectcard title={data.title} desc={data.desc} key={index} pid={index} cover={data.coveriimg} id={data.id} link={data.link}/>
+                  <Projectcard title={data.title} desc={data.desc} key={index} pid={index} cover={data.coverimg} id={data.id} link={data.link}/>
                 ))
               }
             </>
